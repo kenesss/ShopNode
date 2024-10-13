@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Edit product</title>
+</head>
+<body>
+    <header>
+        <div class = "left">
+            <img src="/logo.png" alt="logo">
+            <div class = "header_search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #777c82;"></i>
+                <input type="text" placeholder = "Search">
+            </div>
+        </div>
+    </header>
+    <div class = "home">
+        <p>Home</p>
+        <i>></i>
+        <p>edit product</p>
+    </div>
+    <div class = "add_content">
+        <h1>Редактирование товара</h1>
+        <form action="/edit" method="POST">
+            <input type="hidden" name="id" value="<%=data._id%>">
+            <ul>
+                <li><input type="text" placeholder = "Название продукта" class = "add_input" value="<%=data.name%>" name="name"></li>
+                <li><input type="text" placeholder = "Цена" class = "add_input" value="<%=data.price%>" name="price"></li>
+                <li><input type="text" placeholder = "Скидка" class = "add_input" value="<%=data.sale%>" name="sale"></li>
+                <li><input type="text" placeholder = "URL картинки" class = "add_input" value="<%=data.url%>" name="url"></li>
+            </ul>
+            <button class = "add_button" type="submit">Сохранить изменения</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/66dd2dcae3.js" crossorigin="anonymous"></script>
+</body>
+</html>

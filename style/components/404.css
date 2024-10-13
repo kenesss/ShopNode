@@ -1,0 +1,19 @@
+.found{
+    text-align: center;
+    margin-top: 7%;
+}
+.found h1{
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    color: #FE6769;
+    margin-bottom: 2%;
+}
+.found h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.found a{
+    text-decoration: none;
+}

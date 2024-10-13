@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Product</title>
+</head>
+<body>
+    <header>
+        <div class = "left">
+            <img src="logo.png" alt="logo">
+            <div class = "header_search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #777c82;"></i>
+                <input type="text" placeholder = "Search">
+            </div>
+        </div>
+    </header>
+    <div class = "home">
+        <p>Home</p>
+        <i>></i>
+        <p>products</p>
+    </div>
+    <div class = "content">
+        <div class = "content_main">
+            <div class = "content_header">
+                <h1>Cheirs</h1>
+                <div class = "add_but">
+                    <a href="/add">
+                        <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                        <button>Добавить продукт</button>
+                    </a>
+                </div>
+            </div>
+            <div class = "content_flex">
+                <%
+                    data.forEach(item => {
+                
+                %>
+                    <div class = "box">
+                        <div class = "box_icon">
+                            <div class = "salary">
+                                <p><%=item.sale%>%</p>
+                            </div>
+                            <div class = "icon">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                        <div class = "box_img">
+                            <img src="<%=item.url%>" alt="cheir">
+                        </div>
+                        <div class = "box_text">
+                            <p><%=item.name%></p>
+                            <p><%=item.price%>$</p>
+                        </div>
+                        <div class = "box_add">
+                            <i>+</i>
+                        </div>
+                        <div class = "box_bar">
+                            <i class="fa-solid fa-ellipsis" onclick="ChangeMenu(event)"></i>
+                            <div id = "burger-menu">
+                                <div class = "menu-item">
+                                    <a href="/edit/<%=item._id%>">
+                                        <p>Редактировать</p>
+                                    </a>
+                                </div>
+                                <div class = "menu-item">
+                                    <a href="/delete/<%=item._id%>">
+                                        <p>Удалить</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                <%   
+                    })
+                %>
+            </div>
+        </div>
+    </div>
+    <script src="burger-menu.js"></script>
+    <script src="https://kit.fontawesome.com/66dd2dcae3.js" crossorigin="anonymous"></script>
+</body>
+</html>

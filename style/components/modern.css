@@ -1,0 +1,41 @@
+.list{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.list_content{
+    display: flex;
+    width: 42%;
+}
+.mod_box{
+    width: 100%;
+}
+.box_text p{
+    margin-bottom: 10px;
+}
+.text_u{
+    margin: 10px 40px;
+}
+.text_u h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-bottom: 25px;
+}
+.text_u p{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 35px;
+}
+.text_u button{
+    width: 227px;
+    height: 51px;
+    border-radius: 15px;
+    background: #FE6769;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}

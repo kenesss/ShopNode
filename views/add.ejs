@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>New product</title>
+</head>
+<body>
+    <header>
+        <div class = "left">
+            <img src="/logo.png" alt="logo">
+            <div class = "header_search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #777c82;"></i>
+                <input type="text" placeholder = "Search">
+            </div>
+        </div>
+    </header>
+    <div class = "home">
+        <p>Home</p>
+        <i>></i>
+        <p>new product</p>
+    </div>
+    <div class = "add_content">
+        <h1>Добавить товар</h1>
+        <form action="/new" method="POST">
+            <ul>
+                <li><input type="text" placeholder = "Название продукта" class = "add_input" name="name"></li>
+                <li><input type="text" placeholder = "Цена" class = "add_input" name="price"></li>
+                <li><input type="text" placeholder = "Скидка" class = "add_input" name="sale"></li>
+                <li><input type="text" placeholder = "URL картинки" class = "add_input" name="url"></li>
+            </ul>
+            <button class = "add_button" type="submit">Добавить продукт</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/66dd2dcae3.js" crossorigin="anonymous"></script>
+</body>
+</html>
